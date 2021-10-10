@@ -61,8 +61,8 @@ void MCP2515_Open(char rxint)
         Bit_Modify(_CANCTRL , 0b11100000 , 0b00000000);                         //通常動作モードに設定
         INTCONbits.GIE = 1;                                                     //割り込み可能
         INTCONbits.PEIE = 1;
-        INTCONbits.T0IE = 0;                                                    //TMR0割り込み可能（普通のタイマー0として使う時はいらない）
-        INTCONbits.INTE = 0;                                                    //RB0/INT外部割り込み可能(タイマー割り込みの時は0にする)
+        INTCONbits.T0IE = 0;                                                    //TMR0割り込み可能（普通のTMR0として使う時はいらない）
+        INTCONbits.INTE = 1;                                                    //RB0/INT外部割り込み可能(タイマー割り込みの時は0にする)
         INTCONbits.T0IF = 0;                                                    //TMR0割り込みフラグ　= 0
         INTCONbits.INTF = 0;                                                    //RB0/INT外部割り込みフラグ = 0
         TRISBbits.TRISB0 = 1;                                                   //RB0 = 入力
