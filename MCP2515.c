@@ -1,7 +1,7 @@
 /*************************************************************************
  * File         :MCP2515.c                     				 
  * Date         :2021/10/10					 
- * Summary      :			
+ * Summary      :Use for MCP2515			
  * CPU type     :PIC16F886						 
  * Compiler     :XC8							 
  * Author       :						 
